@@ -1,0 +1,9 @@
+
+
+# Load bootloader symbols
+set confirm off
+    add-symbol-file C:/Workspace/NCKH/bailan2/WiEvac_Final/wievac/firmware/transmitter/build-repaired/bootloader/bootloader.elf
+set confirm on
+
+# Load application symbols
+file C:/Workspace/NCKH/bailan2/WiEvac_Final/wievac/firmware/transmitter/build-repaired/wievac_transmitter.elf

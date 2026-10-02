@@ -1,0 +1,38 @@
+dependencies:
+  cmake_utilities:
+    dependencies:
+    - name: idf
+      version: '>=4.1'
+    source:
+      path: managed_components/espressif__cmake_utilities
+      type: local
+    version: 0.5.3
+  esp_csi_gain_ctrl:
+    dependencies:
+    - name: espressif/cmake_utilities
+      version: 0.*
+    - name: idf
+      version: '>=4.4.1'
+    source:
+      path: managed_components/espressif__esp_csi_gain_ctrl
+      type: local
+    targets:
+    - esp32
+    - esp32s3
+    - esp32s2
+    - esp32c3
+    - esp32c5
+    - esp32c6
+    - esp32c61
+    version: 0.1.5
+  idf:
+    source:
+      type: idf
+    version: 6.0.2
+direct_dependencies:
+- cmake_utilities
+- esp_csi_gain_ctrl
+- idf
+manifest_hash: 350bfa7d8ea7a080479ea567be78464971f32132f9d01bed84a2b2046e11ca43
+target: esp32s3
+version: 3.0.0
